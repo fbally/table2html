@@ -1,0 +1,6 @@
+export(data2html,data2html.default,data2html.data.frame,
+	data2html.summaryDefault,data2html.table,data2html.integer)
+export(table2html,table2html.default,table2html.table,table2html.matrix,
+	table2html.factor,table2html.character,table2html.data.frame,table2html.data.table)
+export(get.css,html.document)
+import(XML)

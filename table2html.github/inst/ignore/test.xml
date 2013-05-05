@@ -1,0 +1,18 @@
+<table>
+	<thead>
+		<tr>
+			<td>th.1</td>
+			<td>th.2</td>
+		</tr>
+	</thead>
+	<body>
+		<tr>
+			<td>td.1.1</td>
+			<td>td.1.2</td>
+		</tr>
+		<tr>
+			<td>td.2.1</td>
+			<td>td.2.2</td>
+		</tr>
+	</body>
+</table>

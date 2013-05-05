@@ -1,0 +1,425 @@
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:1.3em; 
+}
+
+h2 { 
+   font-size:1.2em; 
+}
+
+h3 { 
+   font-size:1.1em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 5px;
+   max-width: 100;
+   border: 1px solid #ccc;
+}
+
+pre code {
+   display: block;
+   padding: 0.5em;
+   font-size:0.9em;
+}
+
+code.r {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+table { page-break-inside:auto }
+tr    { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+#TOC {
+	position:fixed;
+	left: 2px;
+	top: 2px;
+}
+#TOC ul {
+	list-style-type:none;
+	padding:2px 0px 2px 2px;
+	margin:0px ;
+	width:200px;
+	border: 1px solid grey;
+	background-color:#F5F5F5;
+}
+
+#TOC ul ul {
+	list-style-type:none;
+	padding-left:4px;
+	margin:0px;
+	border:none;
+	background-color:transparent;
+}
+#TOC ul ul ul {
+	list-style-type:none;
+	padding-left:4px;
+	margin:0px;
+}
+#TOC ul ul ul ul{
+	list-style-type:none;
+	padding-left:4px;
+	margin:0px;
+}
+#TOC ul li {
+	padding-top:4px;
+}
+#TOC ul ul li {
+	padding-top:2px;
+}
+#TOC ul ul ul li {
+	padding-top:1px;
+}
+#TOC ul ul ul ul li {
+	padding-top:1px;
+}
+
+#header, #doc-content{
+	position:relative;
+	left: 200px;
+	width:85%;
+}
+.rTableDiv{
+	width:100%;
+
+}
+
+.rTable {
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse:collapse;
+	border:1pt solid grey;
+	min-width:30%;
+}
+
+.rTable caption{
+	text-align:left;
+	min-width:30%;
+}
+
+.rTable tr td {
+	border-top:1pt solid grey;
+	border-right:1pt solid grey;
+	border-bottom:1pt solid grey;
+	border-left:1pt solid grey;
+	padding:4pt;
+	align:middle;
+}
+
+.rTableLeftTop {
+	border-left: 0pt none;
+	border-top: 0pt none;
+}
+
+.rTableRowHeader1,.rTableRowHeader2,.rTableRowHeader3,.rTableRowHeader4,.rTableRowHeader5,
+.rTableColHeader1,.rTableColHeader2,.rTableColHeader3,.rTableColHeader4,.rTableColHeader5 {
+	font-weight:bold;
+}
+.rTableColHeader1,.rTableColHeader2,.rTableColHeader3,.rTableColHeader4,.rTableColHeader5 {
+	text-align:center;
+}
+
+.rTableColLabel1,.rTableColLabel2,.rTableColLabel3,.rTableColLabel4,.rTableColLabel5 ,
+.rTableRowLabel1,.rTableRowLabel2,.rTableRowLabel3,.rTableRowLabel4,.rTableRowLabel5 {
+	text-decoration: italic;
+}
+.rTableColLabel1,.rTableColLabel2,.rTableColLabel3,.rTableColLabel4,.rTableColLabel5,
+.rTableColTotal1Label,.rTableColTotal2Label,.rTableColTotal3Label,.rTableColTotal4Label,.rTableColTotal5Label{
+	text-align: center;
+}
+
+.rTableColLabel1, 
+.rTableColHeader1,
+.rTableColTotal1Label,
+.rTableColTotal1Cell {
+	background-color:#FFF5F0;
+}
+.rTableColLabel2, 
+.rTableColHeader2,
+.rTableColTotal2Label,
+.rTableColTotal2Cell  {
+	background-color:#FEE0D2;
+}
+.rTableColLabel3, 
+.rTableColHeader3,
+.rTableColTotal3Label,
+.rTableColTotal3Cell  {
+	background-color:#FCBBA1;
+}
+.rTableColLabel4, 
+.rTableColHeader4,
+.rTableColTotal4Label,
+.rTableColTotal4Cell  {
+	background-color:#FC9272;
+}
+.rTableColLabel5, 
+.rTableColHeader5,
+.rTableColTotal5Label,
+.rTableColTotal5Cell  {
+	background-color:#FB6A4A;
+}
+
+
+.rTableRowLabel1, 
+.rTableRowHeader1,
+.rTableRowTotal1Label,
+.rTableRowTotal1Cell {
+	background-color:#F7FBFF;
+}
+.rTableRowLabel2, 
+.rTableRowHeader2,
+.rTableRowTotal2Label,
+.rTableRowTotal2Cell {
+	background-color:#DEEBF7;
+}
+.rTableRowLabel3, 
+.rTableRowHeader3,
+.rTableRowTotal3Label,
+.rTableRowTotal3Cell {
+	background-color:#C6DBEF;
+}
+.rTableRowLabel4,
+.rTableRowHeader4,
+.rTableRowTotal4Label,
+.rTableRowTotal4Cell {
+	background-color:#9ECAE1;
+}
+.rTableRowLabel5,
+.rTableRowHeader5,
+.rTableRowTotal5Label,
+.rTableRowTotal5Cell {
+	background-color:#6BAED6;
+}
+
+.rTableRowTotal1Cell,.rTableColTotal1Cell,
+.rTableRowTotal2Cell,.rTableColTotal2Cell,
+.rTableRowTotal3Cell,.rTableColTotal3Cell,
+.rTableRowTotal4Cell,.rTableColTotal4Cell,
+.rTableRowTotal5Cell,.rTableColTotal5Cell {
+	text-align: center;
+}
+
+.rTableRowColTotal11Cell,
+.rTableRowColTotal21Cell,
+.rTableRowColTotal31Cell,
+.rTableRowColTotal41Cell,
+.rTableRowColTotal51Cell,
+.rTableRowColTotal12Cell,
+.rTableRowColTotal22Cell,
+.rTableRowColTotal32Cell,
+.rTableRowColTotal42Cell,
+.rTableRowColTotal52Cell,
+.rTableRowColTotal13Cell,
+.rTableRowColTotal23Cell,
+.rTableRowColTotal33Cell,
+.rTableRowColTotal43Cell,
+.rTableRowColTotal53Cell,
+.rTableRowColTotal14Cell,
+.rTableRowColTotal24Cell,
+.rTableRowColTotal34Cell,
+.rTableRowColTotal44Cell,
+.rTableRowColTotal54Cell,
+.rTableRowColTotal15Cell,
+.rTableRowColTotal25Cell,
+.rTableRowColTotal35Cell,
+.rTableRowColTotal45Cell,
+.rTableRowColTotal55Cell	{
+	text-align: center;
+	font-weight:bold;
+}
+.rTableRowColTotal11Cell,
+.rTableRowColTotal12Cell,
+.rTableRowColTotal13Cell,
+.rTableRowColTotal14Cell,
+.rTableRowColTotal15Cell {
+	background-color:#F7FBFF;
+}
+.rTableRowColTotal21Cell,
+.rTableRowColTotal22Cell,
+.rTableRowColTotal23Cell,
+.rTableRowColTotal24Cell,
+.rTableRowColTotal25Cell {
+	background-color:#DEEBF7;
+}
+.rTableRowColTotal31Cell,
+.rTableRowColTotal32Cell,
+.rTableRowColTotal33Cell,
+.rTableRowColTotal34Cell,
+.rTableRowColTotal35Cell {
+	background-color:#C6DBEF;
+}
+.rTableRowColTotal41Cell,
+.rTableRowColTotal42Cell,
+.rTableRowColTotal43Cell,
+.rTableRowColTotal44Cell,
+.rTableRowColTotal45Cell {
+	background-color:#9ECAE1;
+}
+.rTableRowColTotal51Cell,
+.rTableRowColTotal52Cell,
+.rTableRowColTotal53Cell,
+.rTableRowColTotal54Cell,
+.rTableRowColTotal55Cell {
+	background-color:#6BAED6;
+}
+
+
+.rTableCellDescriptor {
+	text-decoration:italic;
+	font-size: 0.8em;
+	text-align: center;
+	background-color: #FAFFAD;
+}
+
+.rTableCell {
+	text-align: center;
+}
+.rTableCount {
+	margin: 0;
+	font-size: 1em;
+}
+.rTablePct,.rTableRowPct,.rTableColPct {
+	margin:0;
+	font-size: 0.8em;
+}
+.rTableRowPct {
+	color:blue;
+}
+.rTableColPct {
+	color:green;
+}
+
+
+
+.rTableRowTotal1Label,.rTableColTotal1Label,
+.rTableRowTotal2Label,.rTableColTotal2Label,
+.rTableRowTotal3Label,.rTableColTotal3Label,
+.rTableRowTotal4Label,.rTableColTotal4Label,
+.rTableRowTotal5Label,.rTableColTotal5Label {
+	font-weight:bold;
+}
+.rTableRowTotal1Label,.rTableRowTotal1Cell,
+.rTableColTotal1Label,.rTableColTotal1Cell {
+	font-size:1.0em;
+}
+.rTableRowTotal2Label,.rTableRowTotal2Cell,
+.rTableColTotal2Label,.rTableColTotal2Cell {
+	font-size:1.1em;
+}
+.rTableRowTotal3Label,.rTableRowTotal3Cell,
+.rTableColTotal3Label,.rTableColTotal3Cell {
+	font-size:1.24em;
+}
+.rTableRowTotal4Label,.rTableRowTotal4Cell,
+.rTableColTotal4Label,.rTableColTotal4Cell {
+	font-size:1.3em;
+}
+.rTableRowTotal5Label,.rTableRowTotal5Cell,
+.rTableColTotal5Label,.rTableColTotal5Cell {
+	font-size:1.4em;
+}
+.rTableRowTotal1Label,.rTableRowTotal2Label,.rTableRowTotal3Label,,.rTableRowTotal4Label,,.rTableRowTotal5Label {
+	text-align: left;
+}
+.rTableColTotal1Label,.rTableColTotal2Label,.rTableColTotal3Label,,.rTableColTotal4Label,,.rTableColTotal5Label {
+	text-align: center;
+}
+

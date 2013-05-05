@@ -1,0 +1,12 @@
+Package: table2html
+Type: Package
+Title: Transforms R objects into HTML tables
+Version: 0.1
+Date: 2012-10-06
+Author: Frank Bally
+Maintainer: Frank Bally <frank.bally@gmail.com>
+Description: R objects table, ftable, matrix, array and prints are transformed into a HTML table as HTML text or as a XML object. Multidimensional tables are flattened in the same way ftable() does. The HTML code is rich in css styles allowing custom formatting. 
+Suggests: knitr,markdown,data.table,svUnit
+Depends: XML,base
+License: GPL (>= 2)
+LazyData: yes

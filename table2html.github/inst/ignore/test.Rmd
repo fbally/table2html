@@ -1,0 +1,16 @@
+#Titanic
+```{r echo=T,results='asis', tidy.opts=list(width.cutoff=180)}
+names(dimnames(Titanic))
+
+table2html(Titanic, row.vars=c(1,2,3,4),sub.totals=c(1,2,3,4))
+table2html(Titanic[1:2,1:2,,], row.vars=c(1,2,3,4),sub.totals=c(2))
+table2html(Titanic[1:2,1:2,,], row.vars=c(1,2,3,4),sub.totals=c(2,3))
+table2html(Titanic[1:2,1:2,,], row.vars=c(1,2,3,4),sub.totals=c(1,3))
+table2html(Titanic[1:2,1:2,,], row.vars=c(1,2),sub.totals=c(1,3))
+table2html(Titanic[1:2,1:2,,], row.vars=c(1,2),sub.totals=c(1,2,3,4))
+table2html(Titanic, row.vars=c(1,2),sub.totals=c(1,2,3,4))
+table2html(Titanic[1:2,1:2,,], col.vars=c(1,2,3,4),sub.totals=c(2))
+table2html(Titanic[1:2,1:2,,], col.vars=c(1,2,3,4),sub.totals=c(2,4))
+table2html(Titanic[1:2,1:2,,], col.vars=c(1,2,3,4),sub.totals=c(1,3))
+
+```
