@@ -100,7 +100,7 @@ table2html.table <- function (x,
 			caption
 	)
 
-	xml <- table2html.createXML( table.outline )
+	xml <- table2html.createHTML( table.outline )
 	if( output %in% c('print','p') ) {
 		cat(saveXML(xml,prefix=NULL))
 	} else if ( output %in% c('character','c') ) {

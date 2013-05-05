@@ -7,7 +7,7 @@
 
 
 
-table2html.createXML <- function( table.outline ) {
+table2html.createHTML <- function( table.outline ) {
 
 	library(XML)
 	
